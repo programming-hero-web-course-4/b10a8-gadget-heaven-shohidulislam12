@@ -1,0 +1,244 @@
+{
+    "products": [
+      {
+        "product_id": 1,
+        "product_title": "MacBook Air M1",
+        "product_image": "https://i.postimg.cc/NfTZZWsp/download-1.jpg",
+        "category": "Laptops",
+        "price": 999.99,
+        "description": "Apple MacBook Air with M1 chip, 13-inch Retina display.",
+        "specifications": [
+          "8GB RAM",
+          "256GB SSD",
+          "Apple M1 chip",
+          "Up to 18 hours battery life"
+        ],
+        "availability": true,
+        "rating": 4.8
+      },
+      {
+        "product_id": 2,
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i.postimg.cc/hGCY9nsP/download.jpg",
+        "category": "Laptops",
+        "price": 1249.99,
+        "description": "Dell XPS 13, ultra-thin and light laptop with stunning display.",
+        "specifications": [
+          "16GB RAM",
+          "512GB SSD",
+          "Intel Core i7",
+          "13.4-inch FHD+ display"
+        ],
+        "availability": true,
+        "rating": 4.7
+      },
+      {
+        "product_id": 3,
+        "product_title": "HP Spectre x360",
+        "product_image": "https://i.postimg.cc/0QFHBChT/editing-laptop-2048px-231551-2x1-1.webp",
+        "category": "Laptops",
+        "price": 1399.99,
+        "description": "HP Spectre x360 2-in-1 convertible laptop.",
+        "specifications": [
+          "16GB RAM",
+          "1TB SSD",
+          "Intel Core i7",
+          "Touchscreen"
+        ],
+        "availability": true,
+        "rating": 4.6
+      },
+      {
+        "product_id": 4,
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://i.postimg.cc/x8mFDz2c/images.jpg",
+        "category": "Laptops",
+        "price": 1549.99,
+        "description": "Lenovo ThinkPad X1 Carbon, lightweight and powerful business laptop.",
+        "specifications": [
+          "16GB RAM",
+          "512GB SSD",
+          "Intel Core i7",
+          "14-inch display"
+        ],
+        "availability": true,
+        "rating": 4.9
+      },
+      {
+        "product_id": 5,
+        "product_title": "iPhone 13 Pro",
+        "product_image": "https://i.postimg.cc/hGCY9nsP/download.jpg",
+        "category": "Phones",
+        "price": 999.99,
+        "description": "Apple iPhone 13 Pro with Super Retina XDR display.",
+        "specifications": [
+          "128GB storage",
+          "A15 Bionic chip",
+          "Triple 12MP camera",
+          "5G capable"
+        ],
+        "availability": true,
+        "rating": 4.8
+      },
+      {
+        "product_id": 6,
+        "product_title": "Samsung Galaxy S21",
+        "product_image": "https://i.postimg.cc/MGX5JQ0q/images-2.jpg",
+        "category": "Phones",
+        "price": 799.99,
+        "description": "Samsung Galaxy S21 with a stunning 6.2-inch display.",
+        "specifications": [
+          "128GB storage",
+          "Exynos 2100 processor",
+          "Triple camera system",
+          "5G capable"
+        ],
+        "availability": true,
+        "rating": 4.6
+      },
+      {
+        "product_id": 7,
+        "product_title": "Google Pixel 6",
+        "product_image": "https://i.postimg.cc/MGX5JQ0q/images-2.jpg",
+        "category": "Phones",
+        "price": 599.99,
+        "description": "Google Pixel 6 with a powerful camera and Google Tensor chip.",
+        "specifications": [
+          "128GB storage",
+          "Google Tensor chip",
+          "Dual 50MP camera",
+          "5G capable"
+        ],
+        "availability": true,
+        "rating": 4.7
+      },
+      {
+        "product_id": 8,
+        "product_title": "OnePlus 9",
+        "product_image": "https://i.postimg.cc/5NqnB1Nd/images-3.jpg",
+        "category": "Phones",
+        "price": 729.99,
+        "description": "OnePlus 9 with Hasselblad camera and fast charging.",
+        "specifications": [
+          "128GB storage",
+          "Snapdragon 888",
+          "Triple camera system",
+          "65W fast charging"
+        ],
+        "availability": true,
+        "rating": 4.5
+      },
+      {
+        "product_id": 9,
+        "product_title": "Apple Watch Series 7",
+        "product_image": "https://i.postimg.cc/JnZbRcsV/download-3.jpg",
+        "category": "Smart Watches",
+        "price": 399.99,
+        "description": "Apple Watch Series 7 with larger display and fitness tracking.",
+        "specifications": [
+          "GPS and Cellular",
+          "Health tracking",
+          "Always-on display",
+          "Water resistant"
+        ],
+        "availability": true,
+        "rating": 4.6
+      },
+      {
+        "product_id": 10,
+        "product_title": "Samsung Galaxy Watch 4",
+        "product_image": "https://i.postimg.cc/1XKwqm0v/download-4.jpg",
+        "category": "Smart Watches",
+        "price": 249.99,
+        "description": "Samsung Galaxy Watch 4 with health monitoring features.",
+        "specifications": [
+          "Heart rate monitoring",
+          "Sleep tracking",
+          "Wear OS",
+          "Fitness tracking"
+        ],
+        "availability": true,
+        "rating": 4.5
+      },
+      {
+        "product_id": 11,
+        "product_title": "Fossil Gen 6",
+        "product_image": "https://i.postimg.cc/yYVFzRBt/download-5.jpg",
+        "category": "Smart Watches",
+        "price": 299.99,
+        "description": "Fossil Gen 6 smartwatch with customizable features.",
+        "specifications": [
+          "Heart rate monitoring",
+          "Wear OS",
+          "Customizable watch faces",
+          "Built-in GPS"
+        ],
+        "availability": true,
+        "rating": 4.4
+      },
+      {
+        "product_id": 12,
+        "product_title": "Amazfit GTR 3",
+        "product_image": "https://i.postimg.cc/bN31YvwJ/download-6.jpg",
+        "price": 199.99,
+        "description": "Amazfit GTR 3 with long battery life and fitness tracking.",
+        "specifications": [
+          "150+ sports modes",
+          "Long battery life",
+          "Heart rate monitoring",
+          "AMOLED display"
+        ],
+        "availability": true,
+        "rating": 4.6
+      },
+      {
+        "product_id": 13,
+        "product_title": "MacBook Pro 16-inch",
+        "product_image": "https://i.postimg.cc/XvFZ5N49/images-7.jpg",
+        "category": "MacBook",
+        "price": 2499.99,
+        "description": "Apple MacBook Pro 16-inch with M1 Pro chip.",
+        "specifications": [
+          "16GB RAM",
+          "1TB SSD",
+          "Apple M1 Pro chip",
+          "Up to 21 hours battery life"
+        ],
+        "availability": true,
+        "rating": 4.9
+      },
+      {
+        "product_id": 14,
+        "product_title": "MacBook Pro 14-inch",
+        "product_image": "https://i.postimg.cc/ZqyNLFFB/download-7.jpg",
+        "category": "MacBook",
+        "price": 1999.99,
+        "description": "Apple MacBook Pro 14-inch with M1 Pro chip.",
+        "specifications": [
+          "16GB RAM",
+          "512GB SSD",
+          "Apple M1 Pro chip",
+          "Up to 17 hours battery life"
+        ],
+        "availability": true,
+        "rating": 4.8
+      },
+      {
+        "product_id": 15,
+        "product_title": "MacBook Air M2",
+        "product_image": "https://i.postimg.cc/0QFHBChT/editing-laptop-2048px-231551-2x1-1.webp",
+        "category": "MacBook",
+        "price": 1199.99,
+        "description": "Apple MacBook Air with M2 chip and Retina display.",
+        "specifications": [
+          "8GB RAM",
+          "256GB SSD",
+          "Apple M2 chip",
+          "Up to 18 hours battery life"
+        ],
+        "availability": true,
+        "rating": 4.7
+      }
+    ]
+  }
+  
