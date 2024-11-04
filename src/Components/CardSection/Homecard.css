@@ -1,4 +1,7 @@
 
 div a.active {
 background:#9538E2;
+border-radius: 15px;
+color: aliceblue;
 }
+

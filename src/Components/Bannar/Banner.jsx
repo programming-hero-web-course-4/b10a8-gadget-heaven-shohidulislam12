@@ -1,7 +1,10 @@
+import { useLoaderData } from "react-router-dom";
 import HomeCard from "../CardSection/HomeCard";
 
 
 const Banner = () => {
+
+
     return (
         <div className="   container mx-auto">
         <div className=" relative bg-[#9538E2]  md:h-[500px] h-[600px]  text-center mb-3 ">
@@ -18,7 +21,7 @@ const Banner = () => {
         <img className="w-full h-full rounded-xl " src="/banner.jpg" alt="" />
 
         </div>
-        <HomeCard></HomeCard>
+        <HomeCard ></HomeCard>
       </div>
     );
 };

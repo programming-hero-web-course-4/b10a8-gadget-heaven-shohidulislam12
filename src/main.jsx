@@ -10,6 +10,12 @@ import {
 import Footer from './Components/Footer/Footer.jsx';
 import Homepage from './Components/HomePage/Homepage.jsx';
 import Banner from './Components/Bannar/Banner.jsx';
+import Allcards from './Components/CardSection/Allcards.jsx';
+import Laptops from './Components/CardSection/Laptops.jsx';
+import Phones from './Components/CardSection/Phones.jsx';
+import SmartWaitch from './Components/CardSection/SmartWaitch.jsx';
+import Macbook from './Components/CardSection/Macbook.jsx';
+import Iphones from './Components/CardSection/Iphones.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,9 +27,32 @@ const router = createBrowserRouter([
       element:<Banner></Banner>,
       children:[
         {
-          path: "/allProduct",
-        element: <h2>all product </h2>
-        }
+        path: "/all",
+      element:<Allcards />,
+      loader:()=>fetch('/allproduct.json'),
+    },
+        {
+        path: "/laptops",
+      element:<Laptops />,
+    },
+        {
+        path: "/phones",
+      element:<Phones />,
+    },
+        {
+        path: "/smartwatch",
+      element:<SmartWaitch />,
+    },
+        {
+        path: "/macbook",
+      element:<Macbook />,
+    },
+        {
+        path: "/iphones",
+      element:<Iphones />,
+     
+      
+    },
       ]
       },
      
