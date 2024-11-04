@@ -21,7 +21,7 @@ const HomeCard = () => {
               
                  {/* these is for cardas catagori */}
                  <div className="md:col-span-3 gap-5 ">
-                    <h3>here i show home element </h3>
+                 
                     <Outlet></Outlet>
                  </div>
 

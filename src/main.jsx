@@ -16,16 +16,25 @@ import Phones from './Components/CardSection/Phones.jsx';
 import SmartWaitch from './Components/CardSection/SmartWaitch.jsx';
 import Macbook from './Components/CardSection/Macbook.jsx';
 import Iphones from './Components/CardSection/Iphones.jsx';
+import DefaultHome from './Components/CardSection/DefaultHome.jsx';
+import ErrorPAge from './Components/ErrorPage/ErrorPAge.jsx';
+import Details from './Components/Details/Details.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Homepage></Homepage>,
+    errorElement:<ErrorPAge></ErrorPAge>,
     children:[
       {
         path: "/",
       element:<Banner></Banner>,
       children:[
+        {
+          path: "/",
+        element:<DefaultHome />,
+        loader:()=>fetch('/allproduct.json'),
+      },
         {
         path: "/all",
       element:<Allcards />,
@@ -34,32 +43,42 @@ const router = createBrowserRouter([
         {
         path: "/laptops",
       element:<Laptops />,
+      loader:()=>fetch('/allproduct.json'),
     },
         {
         path: "/phones",
       element:<Phones />,
+      loader:()=>fetch('/allproduct.json'),
     },
         {
         path: "/smartwatch",
       element:<SmartWaitch />,
+      loader:()=>fetch('/allproduct.json'),
     },
         {
         path: "/macbook",
       element:<Macbook />,
+      loader:()=>fetch('/allproduct.json'),
     },
         {
         path: "/iphones",
       element:<Iphones />,
+      loader:()=>fetch('/allproduct.json'),
      
       
     },
       ]
       },
+{
+    path: "/details/:id",
+  element:<Details></Details>,
+  loader:()=>fetch('/allproduct.json'),
+  },
      
     ]
   },
-
   
+
   {
     path: "/",
   element:<Footer></Footer>
