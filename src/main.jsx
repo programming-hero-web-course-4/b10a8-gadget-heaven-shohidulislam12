@@ -19,6 +19,7 @@ import Iphones from './Components/CardSection/Iphones.jsx';
 import DefaultHome from './Components/CardSection/DefaultHome.jsx';
 import ErrorPAge from './Components/ErrorPage/ErrorPAge.jsx';
 import Details from './Components/Details/Details.jsx';
+import DashBord from './Components/DashBord/DashBord.jsx';
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,11 @@ const router = createBrowserRouter([
     path: "/details/:id",
   element:<Details></Details>,
   loader:()=>fetch('/allproduct.json'),
+  },
+{
+    path: "/dashBord",
+  element:<DashBord></DashBord>,
+
   },
      
     ]

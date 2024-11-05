@@ -14,9 +14,9 @@ const Cards = ({product}) => {
         </figure>
         <div className=" text-left flex flex-col ">
           <h2 className="">{product_title}</h2>
-          <p> price : {price}$</p>
+          <p> price : ${price}</p>
           <div className="card-actions ">
-          <NavLink to={`details/${product_id}`}>
+          <NavLink to={`/details/${product_id}`}>
           <button className=" text-purple-600 bg-white rounded-2xl border text-sm p-2">View Details</button>
           </NavLink>
           </div>

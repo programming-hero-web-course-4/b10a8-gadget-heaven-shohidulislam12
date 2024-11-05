@@ -1,22 +1,21 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import NAvBar from "../Navbar/NAvBar";
-import { createContext, useState } from "react";
+import { Toaster } from 'react-hot-toast';
 
 
-export const addToCard=createContext([])
 
 const Homepage = () => {
-    const [productcart,setProductCart]=useState([])
+  
 
     return (
      <div>
-
-        <addToCard.Provider value={[productcart,setProductCart]}>
+ <Toaster />
+      
         <NAvBar></NAvBar>
          <Outlet/>
       <Footer></Footer>
-        </addToCard.Provider>
+      
      </div>
     );
 };

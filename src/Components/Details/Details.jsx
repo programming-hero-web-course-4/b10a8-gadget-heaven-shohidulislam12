@@ -1,37 +1,32 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaCartPlus } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
-// import { useState } from "react";
+
 import Cards from "../CardSection/Cards";
-import { useContext, useState } from "react";
-import { addToCard } from "../HomePage/Homepage";
+import { addCartProduct } from "../LocalStorage/LocalStorageCart";
+import { addFav } from "../LocalStorage/LocalFav";
+
+
+
 
 const Details = () => {
-    const [productcart,setProductCart]=useContext(addToCard)
-    // const [productcart,setProductCart]=useState([])
-    const allProduct=useLoaderData()
-    const {id}=useParams()
-    console.log(productcart)
-    const handleAddCard=(cards)=>{
-        console.log( typeof cards)
-        const chekAdd=productcart.find(p=>product_id===parseInt(id))
-        if(chekAdd.length>0){
-            return alert('id already added')
-        }
-        else {
-            setProductCart([...productcart,cards]);
-            return alert('id  added')
-        }
-    }
-    console.log(productcart.length)
+  const allproducts=useLoaderData(); 
+  const {id}=useParams()
 
-   const selectCard=allProduct.find(cards=>cards.product_id===parseInt(id))
+   const selectCard=allproducts.find(cards=>cards.product_id===parseInt(id))
    const {product_id,product_title,product_image,category,price,description,specifications,availability,rating}=selectCard;
+   const handleAddCart=(selectCard)=>{
+  addCartProduct(selectCard)
+  
+  }
+  const handleFavorite=(selectCard)=>{
+    addFav(selectCard)
+  }
     return (
         <div className="relative mb-96">
             <div className="bg-purple-600 container mx-auto md:p-20 h-[400px] p-3 text-white">
-                <h2 className="text-xl ">Product Details</h2>
-                <p className="text-sm">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
+                <h2 className="text-xl ">Product Details{product_title}</h2>
+                <p className="text-sm">{description}</p>
             </div>
             {/* card */}
             <div className="card top-52 left-32 absolute  border border-gray-300 p-2 flex flex-col md:flex-row bg-base-100 md:w-3/4 mx-auto ">
@@ -42,7 +37,7 @@ const Details = () => {
   </figure>
   <div className="card-body bg-base-100 md:w-1/2 w-full text-left">
     <h2 className="card-title">{product_title}</h2>
-    <p>{price}$</p>
+    <p>${price}</p>
     <p >{availability?<button className="btn btn-xs btn-info">in stack</button>:<button className="btn btn-xs btn-info">out of stack</button>}</p>
     
     <p className="text-sm">{description}</p>
@@ -70,10 +65,10 @@ const Details = () => {
 
 </p>
 <div className="flex gap-2  w-auto items-center">
-<p className="flex items-center "><button onClick={()=>handleAddCard(selectCard)} className="flex items-center gap-3 bg-purple-600 btn">Add to Cart  <a ><FaCartPlus /></a></button></p>
+<p className="flex items-center "><button onClick={()=>handleAddCart(selectCard)}  className="flex items-center gap-3 bg-purple-600 btn">Add to Cart  <a ><FaCartPlus /></a></button></p>
 
 <p>
-<button className="rounded-full border p-3 btn "><a ><CiHeart className="text-2xl"  /></a></button>
+<button onClick={()=>handleFavorite(selectCard)} className="rounded-full border p-3 btn "><a ><CiHeart className="text-2xl"  /></a></button>
 </p>
 </div>
   </div>
