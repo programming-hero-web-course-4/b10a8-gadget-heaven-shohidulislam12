@@ -7,7 +7,7 @@ const Banner = () => {
 
     return (
         <div className="   container mx-auto">
-        <div className=" relative bg-[#9538E2]  md:h-[500px] h-[600px]  text-center mb-3 ">
+        <div className=" relative bg-[#9538E2] md:mb-[400px] mb-[200px]  md:h-[500px] h-[600px]  text-center mb-3 ">
           <div className="w-3/4 mb-20 mx-auto text-white">
             <h1 className="text-4xl font-bold">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
             <p className="py-6">

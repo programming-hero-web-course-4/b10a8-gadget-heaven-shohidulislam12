@@ -36,11 +36,13 @@ const handleClose=()=>{
 console.log(cart.length)
     return (
         <div className="container mx-auto my-8">
-            <div className="flex justify-between items-center">
-                <h2 className="font-bold">Cart</h2>
-                <p className="font-bold">Total cost:{TotalCost}</p>
+            <div className="flex justify-between flex-col md:flex-row items-center">
+                <span><h2 className="font-bold">Cart</h2>
+                <p className="font-bold">Total cost:{TotalCost}$</p></span>
+                <span>
                 <p onClick={handleSort}  className="btn btn-outline btn-info">Sort by Price <TbSortDescendingNumbers /></p>
                 <p disabled={cart.length == 0} onClick={handleOpen} className="btn text-white bg-purple-600 "><button  >Purchase</button></p>
+                </span>
             </div>
          <div className="p-5 border m-5 rounded-xl">
          {
