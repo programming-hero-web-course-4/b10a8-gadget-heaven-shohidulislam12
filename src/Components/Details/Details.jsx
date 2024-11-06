@@ -69,12 +69,16 @@ useEffect(()=>{
         }
     </ul>
     <p>Rating ⭐ </p>
-    <ReactStars
+<div className="flex items-center gap-3">
+<ReactStars
     count={5}
+    value={rating}         
+    edit={false}  
     onChange={ratingChanged}
     size={24}
     activeColor="#ffd700"
-  />,
+  /> {rating}
+</div>
 <div className="flex gap-2  w-auto items-center">
 <p className="flex items-center "><button  onClick={()=>handleAddCart(selectCard)}  className="flex items-center gap-3 bg-purple-600 btn">Add to Cart  <a ><FaCartPlus /></a></button></p>
 
