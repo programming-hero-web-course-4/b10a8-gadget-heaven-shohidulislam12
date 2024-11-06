@@ -4,8 +4,9 @@ import { CiHeart } from "react-icons/ci";
 
 import Cards from "../CardSection/Cards";
 import { addCartProduct } from "../LocalStorage/LocalStorageCart";
-import { addFav } from "../LocalStorage/LocalFav";
-
+import { addFav, getFavproduct } from "../LocalStorage/LocalFav";
+import ReactStars from "react-rating-stars-component";
+import { useEffect, useState } from "react";
 
 
 
@@ -13,23 +14,43 @@ const Details = () => {
   const allproducts=useLoaderData(); 
   const {id}=useParams()
 
+const [favrit,setFavrit]=useState(false)
+
+useEffect(()=>{
+  const allWishLIst=getFavproduct()
+  const isExist=allWishLIst.find(p=>p.product_id==id)
+  if(isExist){
+    setFavrit(true)
+  }
+  document.title = 'Details| Gadget Heaven';
+
+  return () => {
+    document.title = 'Gadget Heaven'; 
+  };
+
+},[id])
    const selectCard=allproducts.find(cards=>cards.product_id===parseInt(id))
    const {product_id,product_title,product_image,category,price,description,specifications,availability,rating}=selectCard;
    const handleAddCart=(selectCard)=>{
   addCartProduct(selectCard)
-  
+
   }
   const handleFavorite=(selectCard)=>{
     addFav(selectCard)
+    setFavrit(true)
+
   }
+  const ratingChanged = (newRating) => {
+    console.log(newRating);
+  };
     return (
-        <div className="relative mb-96">
+        <div className="relative md:mb-96 mb-[700px]">
             <div className="bg-purple-600 container mx-auto md:p-20 h-[400px] p-3 text-white">
                 <h2 className="text-xl ">Product Details{product_title}</h2>
                 <p className="text-sm">{description}</p>
             </div>
             {/* card */}
-            <div className="card top-52 left-32 absolute  border border-gray-300 p-2 flex flex-col md:flex-row bg-base-100 md:w-3/4 mx-auto ">
+            <div className="card top-52 md:left-32 absolute  border border-gray-300 p-2 flex flex-col md:flex-row bg-base-100 md:w-3/4 mx-auto ">
   <figure className="md:w-1/2 w-full">
     <img className="rounded-xl h-full w-full"
       src={product_image}
@@ -48,27 +69,17 @@ const Details = () => {
         }
     </ul>
     <p>Rating ⭐ </p>
-  
-   
-  
-    <p><div className="rating rating-sm">
-  <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
-  <input
-    type="radio"
-    name="rating-6"
-    className="mask mask-star-2 bg-orange-400"
-    defaultChecked />
-  <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
-</div> {rating}
-
-</p>
+    <ReactStars
+    count={5}
+    onChange={ratingChanged}
+    size={24}
+    activeColor="#ffd700"
+  />,
 <div className="flex gap-2  w-auto items-center">
-<p className="flex items-center "><button onClick={()=>handleAddCart(selectCard)}  className="flex items-center gap-3 bg-purple-600 btn">Add to Cart  <a ><FaCartPlus /></a></button></p>
+<p className="flex items-center "><button  onClick={()=>handleAddCart(selectCard)}  className="flex items-center gap-3 bg-purple-600 btn">Add to Cart  <a ><FaCartPlus /></a></button></p>
 
 <p>
-<button onClick={()=>handleFavorite(selectCard)} className="rounded-full border p-3 btn "><a ><CiHeart className="text-2xl"  /></a></button>
+<button disabled={favrit} onClick={()=>handleFavorite(selectCard)} className="rounded-full border p-3 btn  " ><a ><CiHeart className="text-2xl"  /></a></button>
 </p>
 </div>
   </div>

@@ -20,6 +20,8 @@ import DefaultHome from './Components/CardSection/DefaultHome.jsx';
 import ErrorPAge from './Components/ErrorPage/ErrorPAge.jsx';
 import Details from './Components/Details/Details.jsx';
 import DashBord from './Components/DashBord/DashBord.jsx';
+import Staticstics from './Components/Statistics/Staticstics.jsx';
+import HelpCenter from './Components/HelpCenter/HelpCenter.jsx';
 
 const router = createBrowserRouter([
   {
@@ -34,37 +36,37 @@ const router = createBrowserRouter([
         {
           path: "/",
         element:<DefaultHome />,
-        loader:()=>fetch('/allproduct.json'),
+        loader:()=>fetch('../allproduct.json'),
       },
         {
         path: "/all",
       element:<Allcards />,
-      loader:()=>fetch('/allproduct.json'),
+      loader:()=>fetch('../allproduct.json'),
     },
         {
         path: "/laptops",
       element:<Laptops />,
-      loader:()=>fetch('/allproduct.json'),
+      loader:()=>fetch('../allproduct.json'),
     },
         {
         path: "/phones",
       element:<Phones />,
-      loader:()=>fetch('/allproduct.json'),
+      loader:()=>fetch('../allproduct.json'),
     },
         {
         path: "/smartwatch",
       element:<SmartWaitch />,
-      loader:()=>fetch('/allproduct.json'),
+      loader:()=>fetch('../allproduct.json'),
     },
         {
         path: "/macbook",
       element:<Macbook />,
-      loader:()=>fetch('/allproduct.json'),
+      loader:()=>fetch('../allproduct.json'),
     },
         {
         path: "/iphones",
       element:<Iphones />,
-      loader:()=>fetch('/allproduct.json'),
+      loader:()=>fetch('../allproduct.json'),
      
       
     },
@@ -73,11 +75,22 @@ const router = createBrowserRouter([
 {
     path: "/details/:id",
   element:<Details></Details>,
-  loader:()=>fetch('/allproduct.json'),
+  loader:()=>fetch('../allproduct.json'),
   },
 {
     path: "/dashBord",
   element:<DashBord></DashBord>,
+
+  },
+{
+    path: "/helpcenter",
+  element:<HelpCenter></HelpCenter>
+
+  },
+{
+    path: "/statistics",
+  element:<Staticstics></Staticstics>,
+  loader:()=>fetch('../allproduct.json'),
 
   },
      

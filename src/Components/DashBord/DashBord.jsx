@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AddCart from "./AddCart";
 import WishList from "./WishList";
 import AddCarts from "./AddCart";
@@ -6,6 +6,10 @@ import AddCarts from "./AddCart";
 
 const DashBord = () => {
      const [button,setButton]=useState(true)
+     useEffect(() => {
+        document.title = 'DashBord| Gadget Heaven';
+
+      }, []);
     return (
         <div>
         <div className="bg-purple-600 container mx-auto md:p-20 h-[400px] p-3 text-white">

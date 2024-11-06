@@ -6,7 +6,7 @@ const Carts = ({item,handleRemove}) => {
     const {product_id,product_title,product_image,category,price,description,specifications,availability,rating}=item
 
     return (
-        <div className="flex p-5 border gap-4 m-5 justify-between rounded-xl">
+        <div className="flex md:flex-row items-center flex-col p-5 border gap-4 m-5 justify-between rounded-xl">
             <img className="w-[150px] h-[150px] rounded-xl" src={product_image} alt="" />
             <div className="text-left ">
                 <h2 className="text-xl font-bold">{product_title}</h2>

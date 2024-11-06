@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { addFav, getFavproduct, removeFavorite } from "../LocalStorage/LocalFav";
-
+import toast  from 'react-hot-toast';
 import WishCart from "./WishCart";
 import { TbSortDescendingNumbers } from "react-icons/tb";
 const WishList = () => {
@@ -9,6 +9,11 @@ const WishList = () => {
         const wishProduct=getFavproduct()
         setWish(wishProduct)
         console.log(wish)
+        document.title = 'WishList| Gadget Heaven';
+
+        return () => {
+          document.title = 'Gadget Heaven'; 
+        };
     },[])
 
     const handleRemoveWish=(id)=>{
@@ -19,6 +24,7 @@ const WishList = () => {
    const handleSort=()=>{
     const sortCart=[...wish].sort((a,b)=>b.price-a.price)
          setWish(sortCart)
+        return toast.success (" product add success to favorite")
    }
     return (
         <div className="container mx-auto my-8">
