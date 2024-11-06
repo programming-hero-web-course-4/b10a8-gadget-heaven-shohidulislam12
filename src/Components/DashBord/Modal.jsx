@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { MdVerified } from "react-icons/md";
 import { getAddCart } from "../LocalStorage/LocalStorageCart";
 import toast  from 'react-hot-toast';
+import { useNavigate } from "react-router-dom";
 const Modal = ({isOpen,TotalCost,onClose}) => {
   const [cart,setCart]=useState([])
   useEffect(()=>{
@@ -9,13 +10,15 @@ const Modal = ({isOpen,TotalCost,onClose}) => {
     setCart(cartProduct)
 
 },[])
+const navigate = useNavigate();
   const handlePurchas=()=>{
     const cartProducts=[];
 localStorage.setItem('addCart',JSON.stringify(cartProducts))
     setCart(cartProducts)
-
+    navigate('/')
     onClose()
-    return toast.success (" product add success to cart")
+
+    return toast.success (" Product SucessFully Purcess ")
 }
 
 

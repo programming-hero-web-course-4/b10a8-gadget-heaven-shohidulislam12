@@ -40,7 +40,7 @@ console.log(cart.length)
                 <h2 className="font-bold">Cart</h2>
                 <p className="font-bold">Total cost:{TotalCost}</p>
                 <p onClick={handleSort}  className="btn btn-outline btn-info">Sort by Price <TbSortDescendingNumbers /></p>
-                <p  onClick={handleOpen} className="btn text-white bg-purple-600 "><button disabled={cart.length === 0} >Purchase</button></p>
+                <p disabled={cart.length == 0} onClick={handleOpen} className="btn text-white bg-purple-600 "><button  >Purchase</button></p>
             </div>
          <div className="p-5 border m-5 rounded-xl">
          {

@@ -36,37 +36,37 @@ const router = createBrowserRouter([
         {
           path: "/",
         element:<DefaultHome />,
-        loader:()=>fetch('../allproduct.json'),
+        loader:()=>fetch('/allproduct.json'),
       },
         {
         path: "/all",
       element:<Allcards />,
-      loader:()=>fetch('../allproduct.json'),
+      loader:()=>fetch('/allproduct.json'),
     },
         {
         path: "/laptops",
       element:<Laptops />,
-      loader:()=>fetch('../allproduct.json'),
+      loader:()=>fetch('/allproduct.json'),
     },
         {
         path: "/phones",
       element:<Phones />,
-      loader:()=>fetch('../allproduct.json'),
+      loader:()=>fetch('/allproduct.json'),
     },
         {
         path: "/smartwatch",
       element:<SmartWaitch />,
-      loader:()=>fetch('../allproduct.json'),
+      loader:()=>fetch('/allproduct.json'),
     },
         {
         path: "/macbook",
       element:<Macbook />,
-      loader:()=>fetch('../allproduct.json'),
+      loader:()=>fetch('/allproduct.json'),
     },
         {
         path: "/iphones",
       element:<Iphones />,
-      loader:()=>fetch('../allproduct.json'),
+      loader:()=>fetch('/allproduct.json'),
      
       
     },
@@ -75,7 +75,7 @@ const router = createBrowserRouter([
 {
     path: "/details/:id",
   element:<Details></Details>,
-  loader:()=>fetch('../allproduct.json'),
+  loader:()=>fetch('/allproduct.json'),
   },
 {
     path: "/dashBord",
@@ -90,7 +90,7 @@ const router = createBrowserRouter([
 {
     path: "/statistics",
   element:<Staticstics></Staticstics>,
-  loader:()=>fetch('../allproduct.json'),
+  loader:()=>fetch('/allproduct.json'),
 
   },
      
